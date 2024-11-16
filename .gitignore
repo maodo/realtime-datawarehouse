@@ -1,0 +1,6 @@
+.vscode/
+dags/__pycache__
+__pycache__
+realtime-env
+plugins/__pycache__
+logs

@@ -1,0 +1,28 @@
+{
+    "tableName": "branch_dim",
+    "tableType": "OFFLINE",
+    "segmentsConfig": {
+      "replication": "1",
+      "schemaName": "branch_dim"
+    },
+    "tableIndexConfig": {
+      "invertedIndexColumns": ["branch_name", "city","state"],
+      "sortedColumn": ["branch_id"],
+      "loadMode": "MMAP"
+    },
+    "ingestionConfig": {
+      "batchIngestionConfig": {
+        "segmentIngestionType": "APPEND",
+        "segmentIngestionFrequency": "DAILY"
+  
+      }
+    },
+    "tenants": {
+      "broker": "DefaultTenant",
+      "server": "DefaultTenant"
+    },
+    "metadata": {
+      "customConfigs": {
+      }
+    }
+  }
